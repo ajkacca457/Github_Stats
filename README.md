@@ -1,2 +1,2 @@
-# igthub_stats
+# github_stats
 Display github statistics about users.
