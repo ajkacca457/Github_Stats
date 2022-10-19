@@ -1,12 +1,16 @@
 import React from 'react';
 import { Routes,Route } from 'react-router-dom';
+import Dashboard from '../Pages/Dashboard';
+import Login from '../Pages/Login';
+import Error from '../Pages/Error';
 
 const AppRoutes = () => {
   return (
     <>
         <Routes>
-            <Route path='/dashboard' element={<div>Home</div>}/>
-            <Route path='/login' element={<div>Login</div>}/>
+            <Route path='/' element={<Dashboard/>}/>
+            <Route path='/login' element={<Login/>}/>
+            <Route path='/*' element={<Error/>}/>
         </Routes>
     </>
   )
