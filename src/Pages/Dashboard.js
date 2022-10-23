@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
 import Navbar from '../components/Navbar';
 import UserInfo from '../components/UserInfo';
-import User from '../components/User';
+import UserDetail from '../components/UserDetail';
 import Search from '../components/Search';
 import Repos from '../components/Repos';
 const Dashboard = () => {
@@ -12,7 +12,7 @@ const Dashboard = () => {
       <Navbar/>
       <Search/>
       <UserInfo/>
-      <User/>
+      <UserDetail/>
       <Repos/>
 
     </div>
