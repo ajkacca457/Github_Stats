@@ -1,8 +1,12 @@
 import React from 'react'
+import Fchart from './Fchart'
 
 const Repos = () => {
   return (
-    <div>Repos</div>
+    <div>
+      Repos
+      <Fchart/>
+    </div>
   )
 }
 
