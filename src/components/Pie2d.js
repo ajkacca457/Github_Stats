@@ -20,44 +20,9 @@ ReactFC.fcRoot(FusionCharts, Column2D, FusionTheme);
 
 
 // STEP 4 - Creating the DOM element to pass the react-fusioncharts component
-const Pie2D= ()=>{
+const Pie2D= ({data})=>{
 
-  // STEP 2 - Chart Data
-const chartData = [
-  {
-    label: "HTML",
-    value: "210"
-  },
-  {
-    label: "CSS",
-    value: "260"
-  },
-  {
-    label: "JS",
-    value: "180"
-  },
-  {
-    label: "RAILS",
-    value: "140"
-  },
-  {
-    label: "NODEJS",
-    value: "115"
-  },
-  {
-    label: "PHP",
-    value: "100"
-  },
-  {
-    label: "C++",
-    value: "30"
-  },
-  {
-    label: "PYTHON",
-    value: "30"
-  }
-];
-
+    console.log(data);
 // STEP 3 - Creating the JSON object to store the chart configurations
 const chartConfigs = {
   type: "pie2d", // The chart type
@@ -76,11 +41,12 @@ const chartConfigs = {
       //Set the y-axis name
       yAxisName: "Reserves (MMbbl)",
       numberSuffix: "K",
+      decimals:0,
       //Set the theme for your chart
       theme: "fusion"
     },
     // Chart Data
-    data: chartData
+    data
   }
 };
 
