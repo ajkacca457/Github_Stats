@@ -20,10 +20,10 @@ ReactFC.fcRoot(FusionCharts, Column2D, FusionTheme);
 
 
 // STEP 4 - Creating the DOM element to pass the react-fusioncharts component
-const Fchart= ({data})=>{
+const Bar2D= ({data})=>{
 // STEP 3 - Creating the JSON object to store the chart configurations
 const chartConfigs = {
-  type: "column2d", // The chart type
+  type: "bar2d", // The chart type
   width: "100%", // Width of the chart
   height: "400", // Height of the chart
   dataFormat: "json", // Data type
@@ -44,4 +44,4 @@ const chartConfigs = {
     return (<ReactFC {...chartConfigs} />);
 }
 
-export default Fchart;
+export default Bar2D;
