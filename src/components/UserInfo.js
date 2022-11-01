@@ -47,7 +47,7 @@
       ]
 
       return (
-        <div className='text-white grid grid-cols-12 gap-x-[5px] w-[90%] mx-auto my-[2%]'>
+        <div className='text-white grid grid-cols-12 gap-x-[5px] w-full mx-auto my-[2%]'>
           {items.map((item)=>{
             return <InfoCard {...item} key={item.id}/>
           })}
