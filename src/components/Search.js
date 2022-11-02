@@ -12,9 +12,10 @@ const Search = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder='search user..' value={user} onChange={(e)=>{setUser(e.target.value)}} />
-        <button className='bg-red-300'>Search</button>
-
+        <div className='form-group flex items-center justify-center gap-x-[5px]'>
+        <input type="text" placeholder='search user..' className='border-2 border-indigo-300 w-full rounded-md py-1 px-2' value={user} onChange={(e)=>{setUser(e.target.value)}} />
+        <button className='bg-red-300 px-3 py-1 rounded-md'>Search</button>
+        </div>
       </form>
     </div>
   )
