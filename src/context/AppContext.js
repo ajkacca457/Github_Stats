@@ -45,7 +45,7 @@ const GithubProvider=({children})=>{
              }
             setIsloading(false);                          
         } catch (error) {
-            console.log(error);
+            toggleError(true, error.message);
         }
 
     }
@@ -55,7 +55,7 @@ const GithubProvider=({children})=>{
     },[])  
 
     return(
-        <AppContext.Provider value={{gituser,gitrepos,gitfollowers,requestlimit, error,getGithubUser}}>
+        <AppContext.Provider value={{gituser,gitrepos,gitfollowers,requestlimit, error,getGithubUser,isloading}}>
             {children}
         </AppContext.Provider>
     )
