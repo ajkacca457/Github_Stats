@@ -52,8 +52,6 @@ let mostForked=gitrepos.reduce((total,item)=>{
   return total;
 },{})
 
-console.log(mostForked);
-
 
 languages=Object.values(languages).sort((a,b)=>{
   return b.value-a.value

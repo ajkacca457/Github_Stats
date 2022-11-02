@@ -40,6 +40,13 @@ const GithubProvider=({children})=>{
             if(response.ok) {
                 const data= await response.json();
                 setGitUser(data);
+                const {login, followers_url}= data;
+                const repoResponse=await fetch(`${rootUrl}/users/${login}/repos?per_page=100`);
+                const repoData= await repoResponse.json();
+                setGitRepos(repoData);
+                const followersResponse=await fetch(`${followers_url}?per_page=100`);
+                const followerData= await followersResponse.json();
+                setGitFollowers(followerData);
             }else {
                 toggleError(true,"no user exists by this name");
              }

@@ -25,8 +25,10 @@ if(isloading) {
       <Navbar/>
       <Search/>
       <UserInfo/>
-      <UserDetail/>
-      <Followers/>
+      <div className='grid grid-cols-2'>
+        <UserDetail className="col-span-1"/>
+        <Followers className="col-span-1"/>
+      </div>
       <Repos/>
 
     </div>

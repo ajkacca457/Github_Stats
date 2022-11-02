@@ -5,10 +5,9 @@ import { AppContext } from '../context/AppContext';
 const UserDetail = () => {
   const {gituser}= useContext(AppContext);
   const {avatar_url:img,bio,blog,company,name,twitter_username}=gituser;
-  console.log(img,bio,blog,company,name,twitter_username);
   return (
-    <div className='bg-indigo-300 flex gap-x-[10px] justify-center items-center p-8 my-[2%]'>
-      <img src={img} alt={name} className="w-[20%]"/>
+    <div className='bg-indigo-300 flex gap-x-[10px] h-[20vh] items-center'>
+      <img src={img} alt={name} className="w-[100px] h-[100px]"/>
       <div>
         <h3>{name || "username"}</h3>
         <p>{bio}</p>
