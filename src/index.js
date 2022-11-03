@@ -18,7 +18,8 @@ root.render(
       <Auth0Provider
       domain='dev-tyvhbrsji5yo4akg.us.auth0.com'
       clientId='lQns1VpwOEb6UcsyAVEJw2Gox1B43CYt'
-      redirectUri={window.location.origin}      
+      redirectUri={window.location.origin}
+      cacheLocation="localstorage"      
       >
         <GithubProvider>   
           <App />
