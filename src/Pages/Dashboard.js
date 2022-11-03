@@ -13,7 +13,7 @@ const {isloading}= useContext(AppContext);
 
 if(isloading) {
   return (
-  <div className='py-8'>
+  <div className='h-[100vh]'>
     <Navbar/>
     <Search/>
     <Loading/>
@@ -21,7 +21,7 @@ if(isloading) {
   )
 }
   return (
-    <div className='py-8'>
+    <div>
       <Navbar/>
       <Search/>
       <UserInfo/>

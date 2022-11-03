@@ -41,16 +41,13 @@ const GithubProvider=({children})=>{
                 const data= await response.json();
                 setGitUser(data);
                 const {login, followers_url}= data;
-                // const repoResponse=await fetch(`${rootUrl}/users/${login}/repos?per_page=100`);
-                // const repoData= await repoResponse.json();
-                // setGitRepos(repoData);
-                // const followersResponse=await fetch(`${followers_url}?per_page=100`);
-                // const followerData= await followersResponse.json();
-                // setGitFollowers(followerData);
 
                 const allResponse= await Promise.allSettled([fetch(`${rootUrl}/users/${login}/repos?per_page=100`),fetch(`${followers_url}?per_page=100`)]);
+                
                 const [repos,followers]=allResponse;
+                
                 const status= "fulfilled";
+
                 if(repos.status===status) {
                     const repoData=await repos.value.json();
                     setGitRepos(repoData);
