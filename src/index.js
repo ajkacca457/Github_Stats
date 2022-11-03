@@ -5,14 +5,25 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import { GithubProvider } from './context/AppContext';
+import { Auth0Provider } from "@auth0/auth0-react";
+
+
+// domain:dev-tyvhbrsji5yo4akg.us.auth0.com
+// clientID: lQns1VpwOEb6UcsyAVEJw2Gox1B43CYt
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <BrowserRouter>
-      <GithubProvider>   
-        <App />
-      </GithubProvider>
+      <Auth0Provider
+      domain='dev-tyvhbrsji5yo4akg.us.auth0.com'
+      clientId='lQns1VpwOEb6UcsyAVEJw2Gox1B43CYt'
+      redirectUri={window.location.origin}      
+      >
+        <GithubProvider>   
+          <App />
+        </GithubProvider>
+      </Auth0Provider>
     </BrowserRouter>
  
 );
