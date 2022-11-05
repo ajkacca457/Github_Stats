@@ -3,12 +3,12 @@ import React from 'react'
 const InfoCard = ({icon, data, label,bgColor}) => {
     return (
     <>
-    <div className={`col-span-3 ${bgColor} p-[5px]`}>
-        <div className='flex w-full justify-center items-center gap-x-[10px]'>
+    <div className={`col-span-3 ${bgColor} py-3 px-2`}>
         {icon}
+        <div className='flex w-full justify-center items-center gap-x-[10px]'>
         <p>{label}</p>
-        </div>
         <p>{data}</p>
+        </div>
         
     </div>
     </>

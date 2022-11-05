@@ -18,36 +18,36 @@
       const items= [
         {
           id:1,
-          icon:<SlUserFollowing size={25}/>,
+          icon:<SlUserFollowing size={25} className="mx-auto"/>,
           label:"following",
           data:following,
-          bgColor:'bg-sky-400'
+          bgColor:'bg-sky-500'
         },
         {
           id:2,
-          icon:<GiShadowFollower size={25}/>,
+          icon:<GiShadowFollower size={25} className="mx-auto"/>,
           label:"followers",
           data:followers,
-          bgColor:'bg-green-400'
+          bgColor:'bg-sky-500'
         },
         {
           id:3,
-          icon:<BiGitRepoForked size={25}/>,
-          label:"Number of Repositories",
+          icon:<BiGitRepoForked size={25} className="mx-auto"/>,
+          label:"Repositories",
           data:public_repos,
-          bgColor:'bg-red-400'
+          bgColor:'bg-sky-500'
         },
         {
           id:4,
-          icon:<MdOutlineSummarize size={25}/>,
+          icon:<MdOutlineSummarize size={25} className="mx-auto"/>,
           label:"gist",
           data:public_gists,
-          bgColor:'bg-violet-500'
+          bgColor:'bg-sky-500'
         },
       ]
 
       return (
-        <div className='text-white grid grid-cols-12 gap-x-[5px] w-full mx-auto my-[2%]'>
+        <div className='text-white grid grid-cols-12 gap-x-[10px] w-full mx-auto my-6'>
           {items.map((item)=>{
             return <InfoCard {...item} key={item.id}/>
           })}

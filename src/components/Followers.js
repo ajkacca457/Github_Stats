@@ -9,11 +9,12 @@ const Followers = () => {
         {gitfollowers.map((item,index)=>{
             const {avatar_url:img,html_url,login}= item;
             return(
-                <div className='flex items-center gap-[10px] my-4 first-of-type:mt-0 bg-sky-300' key={index}>
-                    <img src={img} alt={login} className="w-[50px] h-[50px] rounded-full"/>
-                    <div className='text-left'>
-                        <p>{login}</p>
-                        <a href={html_url}>{html_url}</a>
+                <div className='my-4 px-4 first-of-type:mt-0 bg-sky-300' key={index}>
+                    <div className='flex items-center justify-between gap-[10px]'>
+                        <img src={img} alt={login} className="w-[35px] h-[35px] rounded-full"/>
+                        <div>
+                            <p>{login}</p>
+                        </div>
                     </div>
                 </div>
             )
